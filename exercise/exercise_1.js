@@ -49,11 +49,12 @@ function fibonacci(m){
   
   function check_prime_number(n){
     var i;
+    if (n<=1) {return false;}
     for (i=2;i<=n/2;i++)
     if (n%i==0) {return false;}
     {return true;}
   }
-   console.log(check_prime_number(4));
+   console.log(check_prime_number(-1));
   
 
   /*function swap(&x,&y) {
@@ -105,29 +106,14 @@ function fibonacci(m){
   // input:  ////laptrinh//////code//////javascript/////
   // output: laptrinh/code/javascript
 
-  /*function remove_the_extra_slashes(string_7){
-    var length_string_7=string_7.length;
-    var i,j;
-    while(string_7[0]=="/" ){
-      for (i=0;i<length_string_7;i++)
-      {string_7[i]=string_7[i+1];
-      length_string_7--;}
+function myFunction(param) {
+  var result = '';
+  for (var index = 0; index < param.length - 1; index++) {
+    if (((param[index] == param[index + 1]) && (param[index] == '/')) || ((param[index] == '/') && (result==''))) {
+      continue;
     }
-   
-    while(string_7[length_string_7-1]=="/" ){
-      for (i=length_string_7;i>=0;i--)
-      {string_7[i]=string_7[i-1];
-      length_string_7--;}
-    }
-
-   for (i=0;i<length_string_7;i++){
-      if ((string_7[i]=="/") && (string_7[i+1]=="/")){
-        for (j=i;j<length_string_7-1;j++)
-        string_7[j]=string_7[j+1];
-        i--;
-      }
-    }
-    return string_7;
-    }
-  console.log (remove_the_extra_slashes("////laptrinh//////code//////javascript/////"));
-*/
+    result = result + param[index];
+  }
+  return result;
+}
+console.log(myFunction("laptrinh////code//////javascript////"));
