@@ -1,5 +1,5 @@
 const inventors = [
-    "Albert k Einstein",
+    "Albert Einstein",
     "Issac Newton",
     "Galileo Galilei",
     "Marie Curie",
@@ -145,9 +145,6 @@ console.log(result);
   })
   console.log(result);
   // Bonus: Return a new array, that only has inventors without a middle name. (Hint: think about splice, if you use findIndex. But you may also use another of the methods you've learned about above.)
-  //result=inventors.findIndex(function(name){
-  //  return count(name)<=1;
- // })
  function find_index(n){
  findStart=inventors.findIndex(function(name){
   return count(name)<=1;
