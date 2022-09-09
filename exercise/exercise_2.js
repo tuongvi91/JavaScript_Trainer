@@ -40,8 +40,10 @@ result = inventors.filter(function (name) {
 console.log(result);
 // Print out an array of the numbers which are odd.
 result = numbers.filter(function (number) {
-  if (number % 2 != 0 && number > 0) {
-    return number;
+  if (number > 0) {
+    if (number % 2 != 0) {
+      return number;
+    }
   }
 });
 console.log(result);
