@@ -31,10 +31,9 @@ arrays.push({ id: 5, name: "user 5", age: 29 })
 console.log(arrays);
 
 // task 3: add multiple users to the array
-addArr1 = [{ id: 6, name: "user 6", age: 18 }];
-addArr2 = [{ id: 7, name: "user 7", age: 28 }];
-newArray = arrays.concat(addArr1, addArr2);
-console.log(newArray);
+arrays.push({ id: 6, name: "user 6", age: 18 });
+arrays.push({ id: 7, name: "user 7", age: 28 });
+console.log(arrays);
 
 // task 4: remove 1 user from the array
 arrays.splice(0, 1);
@@ -53,32 +52,31 @@ arrays.map(function (user) {
 console.log(arrays);
 
 // task 7: Find a user with age = 23
-result = arrays.filter(function (users) {
-  if (users.age === 23) { return users; }
+result = arrays.filter(function (user) {
+  if (user.age === 23) { return user; }
 })
 console.log(result);
 
 // task 8: use for loop to get users with age >= 23
 function findUser(array) {
-  var index, count = 0;
+  var index;
   var newArray = [];
   for (index = 0; index < arrays.length; index++)
     if (arrays[index].age >= 23) {
-      newArray[count] = arrays[index];
-      count++;
+      newArray.push(arrays[index]);
     }
   return newArray;
 }
 console.log(findUser(arrays));
 
 // task 9: Based on the above information array, and the ids array below, filter out information about users with id as the array below.
-function findUserWithId(id) {
-  result = arrays.filter(function (users) {
-    if (users.id === id) { return users; }
+function findUserById(id) {
+  result = arrays.filter(function (user) {
+    if (user.id === id) { return user; }
   })
   return result;
 }
-console.log(findUserWithId(3));
+console.log(findUserById(3));
 
 // task 10: sort the users in the above array in ascending age order
 /*function sortingAsceding(array) {
@@ -101,8 +99,8 @@ result = arrays.sort(function (user1, user2) {
 console.log(arrays);
 
 // task 11: update the information in the array above with the field "class" converted in task 6 to uppercase (upCase)
-result = arrays.map(function (users) {
-  return users.class.toUpperCase();
+result = arrays.map(function (user) {
+  return user.class.toUpperCase();
 })
 console.log(result);
 
@@ -182,7 +180,7 @@ console.log(result);
 const student1 = {
   gender1: "male",
   gender2: "female",
-  gender3: "no",
+  gender3: "other",
   get otherGender() {
     return this.gender3;
   }
@@ -191,7 +189,7 @@ console.log(student1.gender3);
 const student2 = {
   gender1: "male",
   gender2: "female",
-  gender3: "no",
+  gender3: "other",
   set otherGender(param) {
     this.gender3 = param;
   }
@@ -204,9 +202,9 @@ console.log(student2.gender3);
 // handle this function when passing user's params as user's information
 function newFunction(idUser) {
   var arr = [];
-  arrays.filter(function (users) {
-    if (users.id === idUser) {
-      arr = ("Hello " + users.name + " - age: " + users.age);
+  arrays.filter(function (user) {
+    if (user.id === idUser) {
+      arr = ("Hello " + user.name + " - age: " + user.age);
     }
   })
   return arr;
