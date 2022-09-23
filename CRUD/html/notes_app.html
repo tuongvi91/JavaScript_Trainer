@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List</title>
+  <link rel="stylesheet" href="../css/notes_app.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="container">
+    <center>
+      <div id="body_container">
+        <div id="top_body">
+          <div id="title">Todo</div>
+          <div id="question">What do you want get done today?</div>
+          <input id="enterTask" type="text" placeholder="Enter task"></input>
+          <div id="white_line"></div>
+          <button id="submit" class="submit" onclick="onSubmit()">Submit</button>
+        </div>
+        <div id="bottom_body">
+          <div id="works">
+            <table>
+              <tbody id="listWork">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </center>
+  </div>
+  <div id="showEditComponent"></div>
+  <script src="../js/notes_app.js"></script>
+</body>
+
 </html>
