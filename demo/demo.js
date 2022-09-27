@@ -79,7 +79,6 @@ console.log(plants.pop());//ptu cuối cùng
 console.log(plants.shift());//ptu đầu tiên
 console.log(plants);
 /*var d=string_demo.search("D");
-var d=string_demo.search("D");
 var g=string_demo.search("g");
 console.log(g);
 var dang=string_demo.slice(d,g+1);    
