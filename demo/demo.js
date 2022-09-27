@@ -1,10 +1,3 @@
-var student={
-  name:"nguyen dang tuong vi",
-  age:19,
-  gender:"female",
-}
-console.log(typeof(student.name));
-/*
 var string_demo="Nguyen Dang Tuong Vi";
 console.log(string_demo.indexOf("n"));
 console.log(string_demo.lastIndexOf("n"));
