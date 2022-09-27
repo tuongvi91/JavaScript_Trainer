@@ -133,4 +133,4 @@ console.log(string_demo.replace("Vi",vi_lower));
 
        // alert(c++); // kết quả là 13
 
-    // alert(c);*/
+       // alert(c);*/
