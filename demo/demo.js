@@ -43,6 +43,7 @@ var result = words.filter(function(word) {
 });
 
 console.log(result);
+
 //1 số thỏa mãn đk ban đầu
 var array = [5, 12, 8, 130, 44];
 var found = array.find(function(item) {
@@ -133,4 +134,4 @@ console.log(string_demo.replace("Vi",vi_lower));
 
        // alert(c++); // kết quả là 13
 
-// alert(c);*/
+    // alert(c);*/
