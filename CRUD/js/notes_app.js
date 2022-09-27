@@ -7,11 +7,11 @@ if (JSON.parse(localStorage.getItem("todos"))) {
 function showWork() {
     let row = "";
     for (var i in list) {
-        row +=`<div id="listWorkSpace"`+"<tr >"
+        row += `<div id="listWorkSpace"` + "<tr >"
             + `<div id="content">${list[i]}</div>`
-            +`<button id="edit" onclick='onEdit(${i})'>Edit</button>` 
-            +`<button id="delete" onclick='onDelete(${i})'>Delete</button>`
-            +"</tr>"+`</div><hr></hr>`;
+            + `<button id="edit" onclick='onEdit(${i})'><label for="control-modal">Edit</label></button>`
+            + `<button id="delete" onclick='onDelete(${i})'>Delete</button>`
+            + "</tr>" + `</div><hr></hr>`;
     }
     document.getElementById("listWork").innerHTML = row;
 };
@@ -21,9 +21,7 @@ function onSubmit(i) {
     list.push(todos);
     localStorage.setItem("todos", JSON.stringify(list));
     window.location.reload();
-    //localStorage.clear();
 }
-
 function onDelete(i) {
     list.splice(i, 1);
     localStorage.setItem("todos", JSON.stringify(list));

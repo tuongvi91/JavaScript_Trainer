@@ -1,3 +1,10 @@
+var student={
+  name:"nguyen dang tuong vi",
+  age:19,
+  gender:"female",
+}
+console.log(typeof(student.name));
+/*
 var string_demo="Nguyen Dang Tuong Vi";
 console.log(string_demo.indexOf("n"));
 console.log(string_demo.lastIndexOf("n"));
@@ -9,7 +16,7 @@ var start=string_demo.indexOf("T");
 var end=string_demo.lastIndexOf("g");
 console.log(string_demo.slice(start,end+1));
 
-// string.substring(start, end);
+// string.substring(start, end); 
 console.log(string_demo.substr(7, 4));
 
 // string.replace(find, replace)
@@ -44,7 +51,7 @@ var result = words.filter(function(word) {
 
 console.log(result);
 
-//1 số thỏa mãn đk ban đầu
+// chỉ trả về 1 số thỏa mãn đk ban đầu
 var array = [5, 12, 8, 130, 44];
 var found = array.find(function(item) {
   return item > 10;
@@ -78,7 +85,7 @@ const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
 console.log(plants.pop());//ptu cuối cùng
 console.log(plants.shift());//ptu đầu tiên
 console.log(plants);
-/*var d=string_demo.search("D");
+var d=string_demo.search("D");
 var g=string_demo.search("g");
 console.log(g);
 var dang=string_demo.slice(d,g+1);    
