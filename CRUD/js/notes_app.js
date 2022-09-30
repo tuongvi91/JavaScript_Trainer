@@ -7,7 +7,7 @@ if (JSON.parse(localStorage.getItem("todos"))) {
 function showWork() {
     let row = "";
     for (var i in list) {
-        row += `<div id="listWorkSpace"` + "<tr >"
+        row += `<div id="listWorkSpace"` + "<tr >" 
             + `<div id="content">${list[i]}</div>`
             + `<button id="edit" onclick='onEdit(${i})'><label for="control-modal">Edit</label></button>`
             + `<button id="delete" onclick='onDelete(${i})'>Delete</button>`
